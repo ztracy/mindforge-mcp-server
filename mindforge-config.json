@@ -1,0 +1,340 @@
+{
+  "mindforge": {
+    "name": "MindForge",
+    "description": "Recipe-based AI development assistant with numbered analytical workflow for systematic development",
+    "version": "2.0.0",
+    "workflow": {
+      "sequence": "Use recipes 1-12 in order for systematic development workflow. Recipe 13 (audit) is for prompt engineering only.",
+      "phases": {
+        "discovery": [1, 2, 11],
+        "planning": [3, 7, 8, 12], 
+        "implementation": [4, 5, 9, 10],
+        "quality": [6, 14],
+        "special": [13]
+      }
+    },
+    "recipes": {
+      "explore": {
+        "file": "01_explore_archaeologist.yaml",
+        "recipe": "#1 The Archaeologist (Discovery Phase)",
+        "primary_use_cases": [
+          "Understanding unfamiliar codebases",
+          "Mapping system architecture and dependencies",
+          "Discovering patterns and conventions in existing code",
+          "Analyzing technical debt before refactoring",
+          "Onboarding to new projects or repositories"
+        ],
+        "when_to_use": "When you need systematic discovery and understanding of code/systems without making changes",
+        "avoid_when": "Don't use for implementation tasks or when you need solutions rather than understanding",
+        "typical_inputs": [
+          "Codebase directories",
+          "Specific modules or components",
+          "System configurations",
+          "Documentation to analyze"
+        ],
+        "output_style": "Structured exploration report with territory maps and key discoveries"
+      },
+      "brainstorm": {
+        "file": "02_brainstorm_inventor.yaml",
+        "recipe": "The Inventor",
+        "primary_use_cases": [
+          "Generating multiple solution approaches for technical problems",
+          "Creative problem-solving when stuck",
+          "Evaluating different architectural options",
+          "Exploring implementation alternatives",
+          "Breaking through conventional thinking limitations"
+        ],
+        "when_to_use": "When you need diverse solution options and creative thinking, especially for open-ended problems",
+        "avoid_when": "Don't use for straightforward implementation tasks or when requirements are completely fixed",
+        "typical_inputs": [
+          "Problem descriptions",
+          "Technical challenges",
+          "Feature requirements",
+          "Performance constraints",
+          "Integration challenges"
+        ],
+        "output_style": "Multiple solution approaches ranked by risk/innovation with honest trade-off analysis"
+      },
+      "validate": {
+        "file": "03_validate_guardian.yaml",
+        "recipe": "The Guardian", 
+        "primary_use_cases": [
+          "Risk assessment before major changes",
+          "Requirement validation and completeness checking",
+          "Assumption verification in project planning",
+          "Security and compliance review",
+          "Identifying potential failure modes"
+        ],
+        "when_to_use": "Before implementing solutions, especially for critical systems or when stakes are high",
+        "avoid_when": "Don't use for routine implementation tasks or when rapid prototyping is needed",
+        "typical_inputs": [
+          "Proposed solutions or architectures",
+          "Project requirements",
+          "System specifications",
+          "Integration plans",
+          "Security policies"
+        ],
+        "output_style": "Risk matrix with critical issues, assumptions to verify, and mitigation strategies"
+      },
+      "refactor": {
+        "file": "04_refactor_craftsman.yaml",
+        "recipe": "The Craftsman",
+        "primary_use_cases": [
+          "Systematic code improvement and cleanup",
+          "Technical debt reduction planning",
+          "Code migration and transformation",
+          "Legacy system modernization",
+          "Performance optimization through restructuring"
+        ],
+        "when_to_use": "When improving existing code quality, structure, or maintainability",
+        "avoid_when": "Don't use for greenfield development or when adding new features without cleanup",
+        "typical_inputs": [
+          "Existing code files or modules",
+          "Technical debt assessments",
+          "Performance bottlenecks",
+          "Maintenance pain points",
+          "Code quality metrics"
+        ],
+        "output_style": "Transformation plan with before/after state, migration steps, and debt analysis"
+      },
+      "debug": {
+        "file": "05_debug_detective.yaml",
+        "recipe": "The Detective",
+        "primary_use_cases": [
+          "Systematic bug investigation and root cause analysis",
+          "Performance bottleneck identification",
+          "Integration failure diagnosis",
+          "Production incident investigation",
+          "Test failure analysis"
+        ],
+        "when_to_use": "When systems are behaving unexpectedly or performance is degraded",
+        "avoid_when": "Don't use for feature development or routine code review",
+        "typical_inputs": [
+          "Error messages and stack traces",
+          "Performance metrics and logs",
+          "System behavior descriptions",
+          "Reproduction steps",
+          "Environment configurations"
+        ],
+        "output_style": "Investigation report with evidence, root cause, solution, and prevention strategies"
+      },
+      "review": {
+        "file": "06_review_inspector.yaml",
+        "recipe": "The Inspector",
+        "primary_use_cases": [
+          "Code review and quality assessment",
+          "Pull request evaluation",
+          "Security vulnerability assessment",
+          "Architecture review and feedback",
+          "Coding standards compliance checking"
+        ],
+        "when_to_use": "When evaluating code quality, security, or adherence to standards",
+        "avoid_when": "Don't use for initial development or when speed is more important than quality",
+        "typical_inputs": [
+          "Code changes or pull requests",
+          "Complete modules or components",
+          "Architecture diagrams",
+          "Security policies",
+          "Coding standards documents"
+        ],
+        "output_style": "Structured review with critical issues, improvements, suggestions, and positives"
+      },
+      "estimate": {
+        "file": "07_estimate_forecaster.yaml", 
+        "recipe": "The Forecaster",
+        "primary_use_cases": [
+          "Project timeline and effort estimation",
+          "Resource planning and allocation",
+          "Technical debt remediation planning",
+          "Feature development scoping",
+          "Migration project planning"
+        ],
+        "when_to_use": "When planning work, allocating resources, or setting realistic expectations",
+        "avoid_when": "Don't use for actual implementation or when estimates aren't needed for planning",
+        "typical_inputs": [
+          "Feature requirements",
+          "Technical specifications",
+          "Team composition and skills",
+          "Historical velocity data",
+          "Constraint definitions"
+        ],
+        "output_style": "Effort ranges with confidence levels, task breakdown, timeline, and risk factors"
+      },
+      "architect": {
+        "file": "08_architect_masterbuilder.yaml",
+        "recipe": "The Master Builder", 
+        "primary_use_cases": [
+          "System architecture design and planning",
+          "Technology stack selection",
+          "Scalability and performance architecture",
+          "Integration pattern design",
+          "Enterprise system design"
+        ],
+        "when_to_use": "When designing new systems or major architectural changes",
+        "avoid_when": "Don't use for minor code changes or when architecture is already well-defined",
+        "typical_inputs": [
+          "Business requirements",
+          "Performance and scalability needs",
+          "Integration requirements", 
+          "Technology constraints",
+          "Compliance requirements"
+        ],
+        "output_style": "Comprehensive architecture with component design, technology decisions, and evolution path"
+      },
+      "simplify": {
+        "file": "09_simplify_minimalist.yaml",
+        "recipe": "The Minimalist",
+        "primary_use_cases": [
+          "Complexity reduction and simplification",
+          "Over-engineered system cleanup",
+          "API and interface streamlining",
+          "Configuration and setup simplification",
+          "User experience simplification"
+        ],
+        "when_to_use": "When systems have grown too complex or when simplicity is a key goal",
+        "avoid_when": "Don't use when complexity is necessary or when adding new features",
+        "typical_inputs": [
+          "Complex systems or components",
+          "Over-engineered solutions",
+          "Tangled codebases",
+          "Complicated workflows",
+          "Bloated interfaces"
+        ],
+        "output_style": "Simplification plan with complexity audit, elimination targets, and implementation steps"
+      },
+      "cleanup": {
+        "file": "10_cleanup_curator.yaml",
+        "recipe": "The Curator",
+        "primary_use_cases": [
+          "Code organization and structure improvement",
+          "Dead code removal and cleanup",
+          "Dependency management and cleanup",
+          "Documentation organization",
+          "Repository maintenance and hygiene"
+        ],
+        "when_to_use": "When codebases need organization, cleanup, or maintenance",
+        "avoid_when": "Don't use for new feature development or when cleanup isn't a priority",
+        "typical_inputs": [
+          "Disorganized codebases",
+          "Legacy code with dead sections",
+          "Dependency lists",
+          "File structures",
+          "Documentation sets"
+        ],
+        "output_style": "Cleanup plan with organization strategy, deletion targets, and standardization approach"
+      },
+      "learn": {
+        "file": "11_learn_scholar.yaml",
+        "recipe": "The Scholar",
+        "primary_use_cases": [
+          "Technology research and evaluation",
+          "Framework and library assessment",
+          "Best practices investigation",
+          "Knowledge transfer and documentation",
+          "Skill development planning"
+        ],
+        "when_to_use": "When investigating new technologies or building team knowledge",
+        "avoid_when": "Don't use for immediate implementation tasks or when expertise already exists",
+        "typical_inputs": [
+          "Technology names or concepts",
+          "Documentation to analyze",
+          "Framework comparisons needed",
+          "Knowledge gaps identified",
+          "Learning objectives"
+        ],
+        "output_style": "Comprehensive learning guide with concepts, examples, best practices, and integration notes"
+      },
+      "plan": {
+        "file": "12_plan_strategist.yaml",
+        "recipe": "The Strategist",
+        "primary_use_cases": [
+          "Project planning and roadmap creation",
+          "Feature development strategy",
+          "Technical migration planning",
+          "Team coordination and milestone planning",
+          "Risk management and contingency planning"
+        ],
+        "when_to_use": "When coordinating complex work or planning multi-phase projects",
+        "avoid_when": "Don't use for simple tasks or when immediate action is needed",
+        "typical_inputs": [
+          "Project goals and requirements",
+          "Resource constraints",
+          "Timeline requirements",
+          "Team capabilities",
+          "Risk factors"
+        ],
+        "output_style": "Strategic plan with phases, milestones, resource allocation, and risk management"
+      },
+      "prompt_engineer": {
+        "file": "13_audit_prompt_audit.yaml",
+        "recipe": "The Prompt Engineer",
+        "primary_use_cases": [
+          "System quality assessment and compliance checking",
+          "Security audit and vulnerability assessment",
+          "Performance benchmarking and analysis",
+          "Code quality metrics and standards compliance",
+          "Operational readiness assessment"
+        ],
+        "when_to_use": "When objective assessment of system quality or compliance is needed",
+        "avoid_when": "Don't use for development tasks or when informal review is sufficient",
+        "typical_inputs": [
+          "Systems to evaluate",
+          "Compliance standards",
+          "Security policies",
+          "Performance requirements",
+          "Quality metrics"
+        ],
+        "output_style": "Comprehensive audit report with findings, risk assessment, and improvement roadmap"
+      },
+      "commit": {
+        "file": "14_validation_prior_to_close.yaml",
+        "recipe": "The Controller",
+        "primary_use_cases": [
+          "Final validation before deployment",
+          "Change verification and testing",
+          "Quality gate enforcement",
+          "Rollback decision making",
+          "Production readiness assessment"
+        ],
+        "when_to_use": "As final checkpoint before committing changes or deploying to production",
+        "avoid_when": "Don't use during development phase or for exploratory work",
+        "typical_inputs": [
+          "Completed changes to validate",
+          "Test results",
+          "Deployment artifacts",
+          "Success criteria",
+          "Rollback procedures"
+        ],
+        "output_style": "Binary pass/fail decision with evidence and reasoning"
+      }
+    },
+    "usage_guidelines": {
+      "recipe_selection": {
+        "discovery_phase": ["explore", "learn"],
+        "planning_phase": ["brainstorm", "validate", "estimate", "plan", "architect"],
+        "implementation_phase": ["refactor", "debug", "simplify", "cleanup"],
+        "quality_phase": ["review", "audit", "commit"]
+      },
+      "mode_selection": {
+        "lite": "Quick tasks, time constraints, immediate needs (5-15 minutes)",
+        "standard": "Typical development tasks, balanced approach (20-40 minutes)", 
+        "full": "Critical decisions, comprehensive analysis, complex problems (45+ minutes)"
+      },
+      "combination_patterns": {
+        "new_feature": ["brainstorm", "validate", "architect", "plan", "commit"],
+        "bug_fixing": ["debug", "validate", "refactor", "review", "commit"],
+        "system_improvement": ["explore", "audit", "simplify", "cleanup", "review"],
+        "technology_adoption": ["learn", "validate", "architect", "plan", "estimate"],
+        "code_maintenance": ["explore", "cleanup", "refactor", "review", "commit"]
+      }
+    },
+    "integration_notes": {
+      "yaml_location": "/Users/ultimoic/Downloads/yaml_superprompts/",
+      "mcp_server_name": "mindforge",
+      "tool_prefix": "mindforge_",
+      "supported_modes": ["lite", "standard", "full"],
+      "context_injection": "User context and code will be injected into the persona's core_mission and behavioral_guidelines",
+      "output_formatting": "Use the output_format section from each YAML for structured responses"
+    }
+  }
+}
