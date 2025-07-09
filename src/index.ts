@@ -70,6 +70,7 @@ class MindForgeServer {
       {
         name: 'mindforge',
         version: '2.0.0',
+        description: 'Recipe-based AI development assistant. Workflow phases: Discovery (1-3): explore→brainstorm→validate | Planning (7-8,12): estimate→architect→plan | Implementation (4-6,9-10): refactor→debug→review→simplify→cleanup | Quality (14): commit | Special (13): prompt_engineer'
       },
       {
         capabilities: {
@@ -143,7 +144,7 @@ class MindForgeServer {
         tools: [
           {
             name: 'mindforge_get_recipe',
-            description: 'Get a specialized analytical recipe for development tasks. Use recipes 1-12 in sequence for systematic workflow. Audit (13) is for prompt engineering only.',
+            description: 'Returns a TEMPLATE/RECIPE for YOU to follow. This tool does NOT perform analysis - it provides proven prompting strategies to improve your analysis quality. You must do the actual analysis yourself using these instructions. Use recipes 1-12 in sequence for systematic workflow.',
             inputSchema: {
               type: 'object',
               properties: {
@@ -172,7 +173,7 @@ class MindForgeServer {
           },
           {
             name: 'mindforge_apply_recipe',
-            description: 'Apply a recipe to analyze actual code/content. Use recipes 1-12 in sequence for systematic workflow. Audit (13) is for prompt engineering only.',
+            description: 'Returns a TEMPLATE/RECIPE for YOU to follow when analyzing code/content. This tool does NOT perform analysis - it provides structured instructions and output formats. You must do the actual analysis yourself following the provided template. Use recipes 1-12 in sequence for systematic workflow.',
             inputSchema: {
               type: 'object',
               properties: {
